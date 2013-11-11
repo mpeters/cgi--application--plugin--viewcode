@@ -176,7 +176,7 @@ sub _view_code {
     my $query = $self->query;
 
     my %options;
-    foreach my $opt qw(highlight line_no pod) {
+    foreach my $opt (qw(highlight line_no pod)) {
         if( defined $query->param($opt) ) {
             $options{$opt} = $query->param($opt);
         } else {
