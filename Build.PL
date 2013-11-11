@@ -17,6 +17,11 @@ my $builder = Module::Build->new(
     },
     create_makefile_pl  => 'small',
     create_readme       => 1,
+    meta_merge => {
+        resources => {
+            repository => 'https://github.com/mpeters/cgi--application--plugin--viewcode',
+        },
+    },
 );
 
 $builder->create_build_script();
